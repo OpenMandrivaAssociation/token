@@ -1,0 +1,11 @@
+diff -up token-24.09/token/CMakeLists.txt.omv~ token-24.09/token/CMakeLists.txt
+--- token-24.09/token/CMakeLists.txt.omv~	2025-03-29 18:54:13.711526188 +0100
++++ token-24.09/token/CMakeLists.txt	2025-03-29 18:53:56.775770479 +0100
+@@ -43,6 +43,7 @@ target_link_libraries(token
+   PUBLIC
+     nlohmann_json
+ )
++set_target_properties(token PROPERTIES VERSION 0.0 SOVERSION 0)
+ target_include_directories(token
+   PUBLIC
+     $<BUILD_INTERFACE:${token_SOURCE_DIR}>
